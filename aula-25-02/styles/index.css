@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 15px 60px;
+}
+
+h2 {
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.images {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  padding-right: 5px;
+}
+
+hr {
+  margin: 15px 0;
+}
+
+.images img {
+  max-width: 50vw;
+}
