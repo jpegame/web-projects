@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./images/bg.jpg");
+  background-size: cover;
+}
+
+header,
+footer {
+  background-color: #8f99b9;
+}
+
+header section {
+  width: 100%;
+  padding: 15px 30px;
+}
+
+main {
+  padding: 15px 60px;
+}
+
+main section {
+  background-color: #8f99b9;
+  border-radius: 15px;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: transform 0.2s;
+}
+
+main section:hover {
+  transform: scale(1.1);
+}
+
+main section ul {
+  padding-left: 15px;
+}
+
+footer {
+  padding: 15px 30px;
+}
+
+header {
+  margin-bottom: 15px;
+}
+
+nav a {
+  padding-right: 5px;
+}
