@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+header,
+footer {
+  background-color: #cdb677;
+}
+
+header {
+  margin-bottom: 15px;
+}
+
+section {
+  width: 100%;
+  padding: 15px 30px;
+}
+
+body {
+  background-color: #ece6cc;
+}
+
 main {
   padding: 15px 60px;
 }
@@ -22,11 +40,20 @@ p {
   gap: 15px;
 }
 
+img {
+  border: 2px rgb(0, 0, 0) solid;
+  border-radius: 15px;
+}
+
+#lies-img {
+  border: 3px red solid;
+}
+
 nav a {
   padding-right: 5px;
 }
 
-hr {
+main hr {
   margin: 15px 0;
 }
 
