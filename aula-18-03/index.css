@@ -1,0 +1,48 @@
+:root {
+  --color-primary-1: #ddeefc;
+  --color-primary-2: #4a93d8;
+  --color-primary-3: white;
+  --color-primary-4: #2a6acb;
+  --color-primary-5: #2856a5;
+}
+
+* {
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--color-primary-5);
+  color: var(--color-primary-3);
+  padding: 30px;
+}
+
+main {
+  padding-top: 7rem;
+  display: flex;
+  margin: 0 30px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+body {
+  background-color: var(--color-primary-1);
+}
+
+.box {
+  background-color: var(--color-primary-2);
+  color: var(--color-primary-3);
+  transition: transform 0.2s;
+}
+
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.box:hover {
+  transform: scale(1.02);
+  background-color: var(--color-primary-4);
+}
