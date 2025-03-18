@@ -1,0 +1,27 @@
+Partida MIBR x KRU
+https://api.thespike.gg/match/125164/stats
+
+Passos:
+- Definir pontuação para os seguintes critérios:
+    . Quantidade de players vivos quando uma kill foi feita
+    . Multikills
+    . Kill que teve trade
+    . Sobrevivencia
+    . Assistencia
+    . Kill que não teve trade
+    . Lado do time influencia na quantidade
+    . Dano causado
+    . Menor pontuação em kills não convertidas em round (exit frag)
+    . Clutches vencidos
+    . Kills contra eco/semi
+    . Kills feitas como o eco/semi
+
+    . Estatisticas avançadas (validar a possibilidade por que essa é insana):
+        - Pegar as first/second kills de todos os duelistas para validar a sua taxa de entry / considerando também a sua taxa de sucesso
+        - Pegar a média de assist de iniciador para validar a qualidade do suporte
+        - Pegar kills feitas sem trade convertidas em round para sentinelas
+        - Pegar a quantidade de clutches e assistencias para controladores
+
+- Dividir soma de pontuação pela quantidade de rounds
+- Pegar o resultado acima para todos os jogadores dos 36 times da liga
+- Aplicar uma média e este valor será o coeficiente de pontuação e dividir todos os valores por ele e assim ver notas abaixo e acima da média
