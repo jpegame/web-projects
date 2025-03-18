@@ -1,27 +1,51 @@
-Partida MIBR x KRU
-https://api.thespike.gg/match/125164/stats
+# VLRating – Algoritmo de Avaliação de Desempenho no Valorant  
 
-Passos:
-- Definir pontuação para os seguintes critérios:
-    . Quantidade de players vivos quando uma kill foi feita
-    . Multikills
-    . Kill que teve trade
-    . Sobrevivencia
-    . Assistencia
-    . Kill que não teve trade
-    . Lado do time influencia na quantidade
-    . Dano causado
-    . Menor pontuação em kills não convertidas em round (exit frag)
-    . Clutches vencidos
-    . Kills contra eco/semi
-    . Kills feitas como o eco/semi
+O **VLRating** é um sistema de pontuação que avalia o desempenho dos jogadores de Valorant com base em diversos critérios, proporcionando uma métrica mais precisa do impacto individual dentro da partida.  
 
-    . Estatisticas avançadas (validar a possibilidade por que essa é insana):
-        - Pegar as first/second kills de todos os duelistas para validar a sua taxa de entry / considerando também a sua taxa de sucesso
-        - Pegar a média de assist de iniciador para validar a qualidade do suporte
-        - Pegar kills feitas sem trade convertidas em round para sentinelas
-        - Pegar a quantidade de clutches e assistencias para controladores
+## 🔗 Exemplo de JSON: Estatísticas da Partida MIBR x KRU  
+[API TheSpike.gg – Partida 125164](https://api.thespike.gg/match/125164/stats)  
 
-- Dividir soma de pontuação pela quantidade de rounds
-- Pegar o resultado acima para todos os jogadores dos 36 times da liga
-- Aplicar uma média e este valor será o coeficiente de pontuação e dividir todos os valores por ele e assim ver notas abaixo e acima da média
+## 🛠️ Como Funciona o Algoritmo?  
+
+O **VLRating** calcula uma pontuação para cada jogador considerando diversos fatores relevantes durante a partida. O cálculo é feito em etapas:  
+
+### 1️⃣ Atribuição de Pontuação por Critérios Específicos  
+
+Cada ação dentro do jogo recebe uma pontuação baseada em seu impacto no round e na partida:  
+
+- **Kills**  
+  - Quantidade de jogadores vivos no momento da kill  
+  - Multikills (dupla, tripla, quadra ou ace)  
+  - Kills com ou sem trade  
+  - Kills que contribuíram para a conversão do round  
+  - Kills feitas contra times em eco/semi-buy  
+  - Kills feitas enquanto o próprio jogador estava de eco/semi-buy  
+  - Exit frags (kills em rounds perdidos) recebem menor pontuação  
+
+- **Sobrevivência e Assistências**  
+  - Sobrevivência no round  
+  - Assistências concedidas  
+
+- **Impacto no Round**  
+  - Clutches vencidos  
+  - Dano causado aos oponentes  
+  - Consideração do lado do time (atacante/defensor)  
+
+### 2️⃣ Estatísticas Avançadas (v2)  
+
+Além das métricas básicas, o VLRating leva em conta estatísticas mais detalhadas, considerando o papel do jogador dentro do time:  
+
+- **Duelistas**: Taxa de entry kills e taxa de sucesso nas disputas iniciais  
+- **Iniciadores**: Média de assistências, avaliando a qualidade do suporte  
+- **Sentinelas**: Kills sem trade que resultaram em round vencido  
+- **Controladores**: Número de clutches vencidos e assistências concedidas  
+
+### 3️⃣ Cálculo da Pontuação  
+
+1. Soma-se a pontuação total de um jogador com base nos critérios acima.  
+2. O resultado é dividido pela quantidade de rounds jogados para obter uma média individual.  
+3. Esse processo é repetido para todos os jogadores dos **36 times da liga**.  
+4. É calculada a média geral entre todos os jogadores para obter um **coeficiente de normalização**.  
+5. Todos os valores individuais são divididos por esse coeficiente para determinar notas **acima ou abaixo da média**.  
+
+Dessa forma, o **VLRating** proporciona uma visão mais justa e detalhada do impacto de cada jogador dentro da partida.
