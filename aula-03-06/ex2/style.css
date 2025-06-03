@@ -1,0 +1,9 @@
+.nave {
+  position: absolute;
+}
+
+.bullet {
+  position: absolute;
+  padding: 30px 3px;
+  background-color: red;
+}
